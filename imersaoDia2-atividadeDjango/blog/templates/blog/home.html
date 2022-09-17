@@ -8,51 +8,11 @@
     
 </head>
 <body>    
-    <div  id="line"> 
-        <div  class="imagem_header">
-            
-            <figcaption class="text_header">Café é Sempre uma Boa Ideia</figcaption>
-        </div>
-    </div>
-
-    <div id="container_1">    
-        <h2 class="h2">Café Expesso</h2>
-        <div class="div_control">
-        <img src="./imagens/expresso.jpg" alt="Expresso" id="Expresso">
-        <p>Um café expresso (do italiano caffè espresso), frequentemente referido simplesmente como expresso (ou ainda internacionalmente expresso), é um método de preparar café através da passagem de água quente (não fervente) sob alta pressão pelo café moído. O café expresso tradicional, em máquina industrial, é feito sob pressão de novecentos a mil quilo pascals (nove a dez atmosferas ou bars), o que explica o termo expresso que aqui tem o sentido de exprimir ou espremer, ao contrário do que muitos pensam não tem originalmente o significado de rápido (este é apenas uma coincidência da automatização), portanto em uma tradução mais contextual o seu nome poderia ser café espremido e por isto muitos preferem manter o original em Italiano usando o termo expresso ou café expresso.</p>
-        </div>
-    </div>
-    <div id="container_1">    
-        <h2 class="h2">Café Mocha</h2>
-        <div class="div_control">
-        <img src="./imagens/mocha.jpg" alt="Mocha" id="Mocha">
-        <p>O nome dado a um tipo de grão de café com um sabor achocolatado, menor e mais redondo que a maioria dos outros tipos de grãos da espécie [Coffea arabica], nativa da Etiópia, mas originalmente cultivada no Iêmen e de lá exportado para o porto de Mocha, de onde deve ter vindo a associação do café expresso ao nome Mocha. Na Europa, café mocha pode ser referir tanto ao café com chocolate ou simplesmente ao café feito com grãos de mocha. O café Moca (Mocha) recebeu esse nome devido à cidade de Mocha, na costa do Mar Vermelho, no Iêmen, que no século quinze foi um importante exportador de café, especialmente para áreas ao redor da Península Ibérica.</p>
-        </div>
-    </div>
-    
-    <div>
-        <table>
-            <tr class="titulo">
-                <th scope="col" colspan="2" id="titulo">Café</th>
-            </tr>
-            <tr>
-                <th scope="row" class="coluna1">Espécies e variedades</th>
-                <td>Coffea arabica - Coffea canephora - Coffea liberica</td>
-            </tr>
-            <tr>
-                <th scope="row">Métodos de Preparo</th>
-                <td>Café coado - Café de percolador - Expresso - Café solúvel - Cafeteira italiana - Prensa francesa - Café turco</td>
-            </tr>
-            <tr>
-                <th scope="row">Bebidas com café</th>
-                <td>Affogato - Black Russian - Café americano - Café bombón - Café-com-leite - Café frappé - Café gelado - Caffè macchiato - Caffè mocha - Cappuccino - Galão - Garoto - Irish coffee - Kopi Luwak - Latte - Latte macchiato - Long black - Moretta - Red eye - White Russian - Café dalgona</td>
-            </tr>
-            <tr>
-                <th scope="row">Substitutos</th>
-                <td>Orzo - Cevada - Chicória</td>
-            </tr>
-        </table>
-    </div>
-   
+    <h1>Home</h1>
+    <ul>
+    {% for postsagem in postagens %}
+    <li><a href="{% url 'leitura_postagem' postagem.id%}">{{PostagemLigações.tecnico}}</a>  -- {{PostagemLigações.dataHora}} -- {{PostagemLigações.tempoDeLigação}} </li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
